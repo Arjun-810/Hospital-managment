@@ -1,23 +1,23 @@
-function sendJSON(){ 
-    console.log("aaa")
-          
-          let result = document.querySelector('.result'); 
-          let name = document.querySelector('#name'); 
-          let password = document.querySelector('#password'); 
-          let xhr = new XMLHttpRequest();
-      
-          xhr.open("POST","http://jsonplaceholder.typicode.com/posts", true); 
-          xhr.setRequestHeader("Content-Type", "application/json"); 
+// var app = angular.module("myApp", []);
+// app.controller("loginController", function ($scope, $http) {
+//     $scope.userName = null;
+//     $scope.password = null;
 
-          xhr.onreadystatechange = function () { 
-              if (xhr.readyState === 4 && xhr.status === 200) { 
+//     $scope.postdoctordata = function (userName, password) {
 
-                  result.innerHTML = this.responseText; 
-
-              } 
-          };  
-          var data = JSON.stringify({ "userId": name.value, "id": password.value }); 
-
-          xhr.send(data); 
-          console.log(data)
-      } 
+//         var data = {
+//             userName: userName,
+//             password: password
+//         }
+//         console.log(data);
+//         $http.post("http://384a09a05a47.ngrok.io/doctor/login/", JSON.stringify(data))
+//             .then(function (res) {
+//                 console.log(res);
+//                 console.log(res.data);
+//                 console.log(res.data[0]);
+//                 var docdata = JSON.stringify(res.data[0]);
+//                 console.log(docdata);
+//                 localStorage.setItem("docdata", docdata);
+//                 window.location.href = "doctor-portal.html";
+//             })
+//     }

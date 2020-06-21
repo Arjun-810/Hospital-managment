@@ -1,0 +1,31 @@
+
+    <div ng-controller="sixthController">
+        <h1>Doctors List</h1>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone NO</th>
+                    <th>Department</th>
+                    <th>Degree</th>
+                    <th>Experience (years)</th>
+                    <th>Status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.first_name}}</td>
+                    <td>{{employee.last_name}}</td>
+                    <td>{{employee.phone_no}}</td>
+                    <td>{{employee.department}}</td>
+                    <td>{{employee.degree}}</td>
+                    <td>{{employee.previous_exp}}</td>
+                    <td>{{employee.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
