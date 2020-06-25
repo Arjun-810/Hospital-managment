@@ -1,55 +1,55 @@
-<div class="content">
+<div class="content" ng-controller="home">
 
-    <article class="card card-cascade wider">
+    <article class="card card-cascade wider" style="background-color: rgb(218, 226, 226);">
       <section class="view gradient-card-header purple-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
-        <h4 class="card-header">Profile</h4>
+        <h3 class="card-header"><strong>Profile</strong></h3>
       </section>
 
-      <section class="card-body">
+      <section class="card-body" style="background-color: rgb(234, 241, 243);">
         <section class="card-deck">
           <section class="card">
             <section class="view overlay p-3 text-center">
               <div class="contaner">
                 <div class="row row-content">
-                  <div class="col-6 col-md-3">
-                   First Name
+                  <div class="col-6 col-md-3 mt-3">
+                  <strong> First Name</strong>
                   </div>
-                  <div class="col-6 col-md-3">
-                    Arjun
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].first_name}}
                   </div>
-                  <div class="col-6 col-md-3">
-                    Last Name
+                  <div class="col-6 col-md-3 mt-3">
+                    <strong>Last Name</strong>
                   </div>
-                  <div class="col-6 col-md-3">
-                    kaushik
-                  </div>
-                </div><br>
-                <div class="row row-content">
-                  <div class="col-6 col-md-3">
-                   Phone no.
-                  </div>
-                  <div class="col-6 col-md-3">
-                    907113723
-                  </div>
-                  <div class="col-6 col-md-3">
-                    Mail Id
-                  </div>
-                  <div class="col-6 col-md-3">
-                    arjunkaushik810@gmail.com
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].last_name}}
                   </div>
                 </div><br>
                 <div class="row row-content">
-                  <div class="col-6 col-md-3">
-                   Degree
+                  <div class="col-6 col-md-3 mt-3">
+                   <strong>Phone Number</strong>
                   </div>
-                  <div class="col-6 col-md-3">
-                    MBBS
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].phone_no}}
                   </div>
-                  <div class="col-6 col-md-3">
-                    Department
+                  <div class="col-6 col-md-3 mt-3">
+                   <strong> Mail Id</strong>
                   </div>
-                  <div class="col-6 col-md-3">
-                    Eyes
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].email}}
+                  </div>
+                </div><br>
+                <div class="row row-content">
+                  <div class="col-6 col-md-3 mt-3">
+                  <strong>Degree</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].degree}}
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                   <strong> Department</strong>
+                  </div>
+                  <div class="col-6 col-md-3 mt-3">
+                    {{doctorProfile[0].department}}
                   </div>
                 </div>
               </div>
@@ -60,12 +60,12 @@
     </article>
 
     <!-- Fourth subject card -->
-    <article class="card card-cascade wider">
+    <article class="card card-cascade wider" style="background-color: rgb(218, 226, 226);">
       <section class="view gradient-card-header peach-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
-        <h4 class="card-header">Details</h4>
+        <h3 class="card-header"><strong>Details</strong></h3>
       </section>
 
-      <section class="card-body">
+      <section class="card-body" style="background-color: rgb(234, 241, 243);">
         <section class="card-deck">
           <section class="card">
             <section class="view overlay p-3 text-center">
@@ -74,7 +74,7 @@
                 Patients Request
               </h3>
               <p class="card-text">Accept/Reject/Edit</p>
-              <a class="btn btn-danger" role="button" target="_blank">View Request</a>
+              <a class="btn btn-danger" ui-sref="patient-rqst()" ng-click="getRqstData()" role="button">View Request</a>
             </section>
           </section>
           <section class="card">
@@ -83,25 +83,7 @@
                 Patient List
               </h3>
               <p class="card-text">Everything to know about Patient</p>
-              <a href="https://hightimes.com/guides/marijuana-cannabis/" class="btn btn-danger" role="button" target="_blank">View article</a>
-            </section>
-          </section>
-          <section class="card">
-            <section class="view overlay p-3 text-center">
-              <h3 class="red-text darken-4">
-                Managers List
-              </h3>
-              <p class="card-text">Managers under Doctors</p>
-              <a href="https://www.youtube.com/watch?v=QZXc39hT8t4" class="btn btn-danger" role="button" target="_blank">Watch video</a>
-            </section>
-          </section>
-          <section class="card">
-            <section class="view overlay p-3 text-center">
-              <h3 class="red-text darken-4">
-                Create Reports
-              </h3>
-              <p class="card-text">Reports of a Patients</p>
-              <a href="https://www.youtube.com/watch?v=Ar4CJKf1LwE" class="btn btn-danger" role="button" target="_blank">Create Reports</a>
+              <a ui-sref="patient-lst()" class="btn btn-danger" ng-click="getpatientList()" role="button">View List</a>
             </section>
           </section>
         </section>

@@ -1,5 +1,11 @@
 <div ng-controller="ElevenController">
-        {{error}}
+    <div class="col-12 bg-light mt-5">UPDATE PATIENT APPOINMENT</div>
+    <div class="row row-content mt-3">
+        <div class="col-6 col-md-3">Chane Appoinment Date</div>
+        <div class="col-6 col-md-3"><input type="date"  ng-model="app_date"> </div>
+        <div class="col-6 col-md-3">Change Appoinment Time</div>
+        <div class="col-6 col-md-3"><input type="time" id="ddate" ng-model="app_time"> </div>
+    </div>
         <table id="customers">
             <thead>
                 <tr>
@@ -16,7 +22,7 @@
                     <td>{{doctors.last_name}}</td>
 
                     <td>
-                        <button class="btn there btn-success" id="test" onclick="sendToDOc(value)" ng-click="sendToDoctor()" value="{{doctors.id}}">
+                        <button class="btn there btn-success" id="test" onclick="sendToDOc(value)" ng-click="sendToDoctor(app_date, app_time)" value="{{doctors.id}}">
                         Request Send to Doctor</button>
                     </td>
                 </tr>

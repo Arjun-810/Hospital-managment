@@ -1,7 +1,6 @@
 
 
 body {
-	background-color: rgb(222, 241, 233);
 	/* background-size: cover; */
 	/* background-repeat: no-repeat; */
 	font-size: 18px;
@@ -12,8 +11,9 @@ body {
 
 .card {
 	border-color: transparent;
-	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	box-shadow: 5px 4px 8px  rgba(0,0,0);
 	margin: 100px 0;
+	/* background-color: rgb(241, 237, 230); */
 }
 
 .card.fat {
@@ -57,7 +57,8 @@ body {
 	border: none;
 	border-bottom: 1px solid rgb(151, 150, 150);
 	outline: none;
-	border-radius: 0;
+	border-radius: 0px;
+	padding: 10px;
 }
 
 .footer {
@@ -67,7 +68,11 @@ body {
 	letter-spacing: 1px;
 	text-align: center;
 }
-
+.bg{
+	background-color: rgb(202, 230, 230);
+	/* padding: 100px; */
+	height: 95vh;
+}
 @media screen and (max-width: 425px) {
 	.card-wrapper {
 		width: 90%;

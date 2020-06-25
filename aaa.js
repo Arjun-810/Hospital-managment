@@ -53,3 +53,9 @@ function docReject(value){
     var rgtId = localStorage.getItem('rgtId')
     console.log(rgtId)
 }
+
+function SendId(value){
+    localStorage.setItem('DrID',value);
+    console.log(value)
+
+}
